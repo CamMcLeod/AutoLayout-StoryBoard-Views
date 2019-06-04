@@ -26,23 +26,23 @@
     self.redView = _redView;
     self.redViewWidthConstraint = _redViewWidthConstraint;
     self.redViewHeightConstraint = _redViewHeightConstraint;
+
     self.redViewWidthConstraint = [NSLayoutConstraint constraintWithItem:self.redView
                                                                                        attribute:NSLayoutAttributeWidth
                                                                                        relatedBy:NSLayoutRelationEqual toItem:nil
                                                                                        attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0
-                                                                                        constant:120 + 48];
-    
+                                                                                        constant:120 + 3*NSLayoutAttributeBottomMargin];
+
     self.redViewWidthConstraint.active = YES;
-    
+
     self.redViewHeightConstraint = [NSLayoutConstraint constraintWithItem:self.redView
                                                                attribute:NSLayoutAttributeHeight
                                                                relatedBy:NSLayoutRelationEqual toItem:nil
                                                                attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0
-                                                                constant:50 + 20];
-    
+                                                                constant:30 + 2*NSLayoutAttributeLeftMargin + NSLayoutAttributeRightMargin];
     self.redViewHeightConstraint.active = YES;
-    
 }
+
 
 
 @end
